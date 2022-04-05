@@ -7,7 +7,7 @@ class AuthForm extends StatefulWidget {
   AuthForm(this.submitFn, this.isLoading);
 
   final void Function(String email, String password, String username,
-      File image, bool isLogin, BuildContext ctx) submitFn;
+      File? image, bool isLogin, BuildContext ctx) submitFn;
   final bool isLoading;
 
   @override
@@ -39,7 +39,7 @@ class _AuthFormState extends State<AuthForm> {
     if (isValid) {
       _formKey.currentState!.save();
       widget.submitFn(_userEmail.trim(), _userPassword.trim(), _userName.trim(),
-          _userImageFile!, _isLogin, context);
+          _userImageFile, _isLogin, context);
     }
   }
 

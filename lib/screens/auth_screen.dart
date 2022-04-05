@@ -17,7 +17,7 @@ class _AuthScreenState extends State<AuthScreen> {
   var _isLoading = false;
 
   void _submitAuthForm(String email, String password, String username,
-      File image, bool isLogin, BuildContext context) async {
+      File? image, bool isLogin, BuildContext context) async {
     AuthResult authResult;
     try {
       setState(() {

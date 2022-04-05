@@ -41,6 +41,19 @@ class _AuthFormState extends State<AuthForm> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  CircleAvatar(
+                    radius: 40,
+                  ),
+                  FlatButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.image,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                      label: Text(
+                        'Add image',
+                        style: TextStyle(color: Theme.of(context).primaryColor),
+                      )),
                   TextFormField(
                     key: ValueKey('email'),
                     validator: (value) {
